@@ -15,20 +15,23 @@
 <body>
 <img src="./devsorteadorlogo.png" alt="devsorteadorlogo"/>
 
-    <h2> Sortear um número</h2>
 
-    <div>
+<div class="main-container"> 
+    <h2> Sortear um número</h2>
+    <div class="inputs">
         <p class="entre"> Entre </p>
-        <input  class="input-min" type="number">
-       <p class="e" > e</p>
+        <input class="input-min" type="number">
+       <p class="e"> e </p>
         <input class="input-max" type="number">
     </div>
+</div>
 
-    <button onclick="generatenumber()"> <b>SORTEAR!</b> </button>
-
+    <div class="alert-message" id="alert-message">* Insira um número válido</div>
+    <div class="alert-result" id="alert-result"> </div>
+    <button class="button" onclick="generatenumber()"> SORTEAR </button>
+    
+    
+    <script src="./script.js"></script>
 </body>
-<script src="./script.js"></script>
-
-</script>
 
 </html>

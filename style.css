@@ -6,12 +6,12 @@
 }
 
 img {
-        width: 580px;
-        height: 370px;
+    width: 580px;
+    height: 370px;
 }
 
 body {
-    background: rgb(90, 185, 90);
+    background: #bad8ba;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,7 +22,7 @@ body {
 h2 {
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 28px;
     color: black;
     text-align: center;
     margin-top: 20px;
@@ -31,88 +31,127 @@ h2 {
 
 p {
     font-weight: 500;
-    text-align: center;
-display: inline-block;
-font-size: 32px;
-margin-right: 10px;
+    display: inline-block;
+    font-size: 25px;
+}
+
+.main-container {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    margin-top: 30px;
+    padding: 5px;
+}
+
+.inputs {
+    display: flex;
+    align-items: center;
 }
 
 input {
-    background: rgba(255, 255, 255, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 14px;
-    height: 70px;
-    width: 200px;
-    padding-left: 20px;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 47px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    height: 50px;
+    width: 150px;
+    font-size: 25px;
+    line-height: 40px;
     color: black;
     opacity: 0.9;
+    outline: none;
+    margin: 20px;
     text-align: center;
 }
 
-.input-min {
-    margin-right: 62px;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input {
+    -moz-appearance: textfield;
 }
 
 button {
-    background: rgb(17, 131, 42);
-    border-radius: 10px;
-    width: 250px;
-    height: 65px;
+    background: rgba(90, 185, 90, 0.6);
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: 0.2 ease-in-out;
+    width: 200px;
+    height: 50px;
     color: black;
-    font-weight: 700;
-    font-size: 36px;
+    font-weight: 400;
+    font-size: 25px;
     margin-top: 45px;
-    border: none;
     cursor: pointer;
 }
 
 button:hover {
-    opacity: 0.9;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid #eee;
 }
 
 button:active {
-    opacity: 0.8;
+    opacity: 0.5;
+}
+
+.alert-message {
+    color: rgb(205, 44, 44);
+    font-size: 16px;
+    margin-top: 10px;
+    display: none;
+    text-align: center;
+}
+
+.alert-result {
+    color: rgb(17, 131, 42);
+    font-size: 30px;
+    margin-top: 30px;
+    display: none;
+    text-align: center;
 }
 
 @media screen and (max-width:750px) {
 
-img {
-width: 300px;
-height: 200px;
-}
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
 
-button {
-    width: 200px;
-    height: 60px;
-    font-weight: 300;
-    font-size: 30px;
-    margin-top: 80px;
-}
+    img {
+        width: 300px;
+        height: 200px;
+    }
 
-input {
-    height: 60px;
-    width: 180px;
-    padding-left: 10px;
-    font-weight: 300;
-    font-size: 27px;
-    line-height: 20px;
-    display: flex;
-    flex-direction:column;
-    margin-left: 65px;
-}
+    .main-container {
+        width: 90%;
+        height: 350px;
+    }
 
-p {
-display: flex;
-text-align: center;
-font-size: 25px;
-margin-left: 120px;
-}
+    .inputs {
+        display: flex;
+        flex-direction: column;
+    }
 
-.e {
-    margin-left: 145px;
-}
+    input {
+        height: 50px;
+        font-size: 25px;
+        text-align: center;
+    }
 
+    .alert-result {
+        font-size: 25px;
+    }
+
+    button {
+        width: 150px;
+        height: 60px;
+        font-size: 25px;
+        margin-top: 20px;
+    }
+
+    p {
+        font-size: 20px;
+    }
 }
